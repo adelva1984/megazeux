@@ -1340,6 +1340,7 @@ static void load_world(struct world *mzx_world, FILE *fp, const char *file,
       mzx_world->input_is_dir = false;
 
       err = fsafetranslate(mzx_world->input_file_name, translated_path);
+#if 0
       if(err == -FSAFE_MATCHED_DIRECTORY)
       {
         if(dir_open(&mzx_world->input_directory, translated_path))
@@ -1350,7 +1351,9 @@ static void load_world(struct world *mzx_world, FILE *fp, const char *file,
         else
           fseek(fp, 4, SEEK_CUR);
       }
-      else if(err == -FSAFE_SUCCESS)
+      else
+#endif
+      if(err == -FSAFE_SUCCESS)
       {
         mzx_world->input_file = fopen_unsafe(translated_path, "rb");
         if(mzx_world->input_file)

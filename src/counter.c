@@ -2198,13 +2198,15 @@ int set_counter_special(struct world *mzx_world, char *char_value,
         }
 
         err = fsafetranslate(char_value, translated_path);
-
+#if 0
         if(err == -FSAFE_MATCHED_DIRECTORY)
         {
           if(dir_open(&mzx_world->input_directory, translated_path))
             mzx_world->input_is_dir = true;
         }
-        else if(err == -FSAFE_SUCCESS)
+        else
+#endif
+        if(err == -FSAFE_SUCCESS)
           mzx_world->input_file = fopen_unsafe(translated_path, "rb");
 
         if(mzx_world->input_file || mzx_world->input_is_dir)
