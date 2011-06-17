@@ -1,4 +1,4 @@
-January 05, 2011 - MZX 2.83b
+July 22, 2011 - MZX 2.83b
 
 Another bugfix release. There are also a few (minor) new features, but a
 bump in world/board/save magic has been avoided.
@@ -102,6 +102,8 @@ USERS
   dragons to <=4. (Lancer-X)
 + Accept SET EDGE COLOR "string" in addition to SET EDGE COLOR c??.
 + Fixed NDS port initialization on DSi devices. (asiekierka)
++ Fixed a bug in the joystick code where centering an axis clears
+  the previous axis button. (iamgreaser)
 
 DEVELOPERS
 
