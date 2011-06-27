@@ -113,6 +113,7 @@ DEVELOPERS
 + Win32 binaries are built ASLR-capable (via pefix).
 + Version control was changed from SVN to Git; the repo is at:
   http://github.com/ajs1984/megazeux
++ The EGL backend now supports Mesa's EGL implementation on X11.
 
 December 29, 2009 - MZX 2.83
 
